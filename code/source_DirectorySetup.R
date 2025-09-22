@@ -1,7 +1,37 @@
 
-
-#######################################
+##############################################################################
+# Levels and trends in the sex ratio at birth and missing female births for 29 states 
+# and union territories in India 1990–2016: A Bayesian modeling study
+#
+# Code constructed by: Fengqing CHAO
+# Code last revised by: Qiqi Qiang on 22 September 2025
+#
+# source_DirectorySetup.R
+#
+# This script creates and assign all directories used in this project.
+#
+# used for which run: Main.run
+#
+# this script is called by any other scripts: main.R
+#
+# this script calls other scripts: null
+# functions called:                null
+# input data:                      null
+# output data:                     null
+#
+# Folders that you need to create by yourself before you start this project:
+# project folder: SRB_Pakistan/
+# input data folder: SRB_Pakistan/data/input/
+# output data folder: SRB_Pakistan/data/output
+#
+#
+# Folders that will be created after running this script for a certain run:
+# 1. SRB_India/data/interim/
+# 2. SRB_India/data/output/; and its subfolders
+# 3. SRB_India/fig/; and its subfolders
+#
 ## setup directory for data cleaning ##
+#######################################
 
 # aux.data.dir <- "data/input/Auxdata/"
 
@@ -9,43 +39,6 @@
 input.dir <- "data/input/"
 interim.dir <- "data/interim/"
 dir.create("data/interim/", showWarnings = FALSE)
-
-if (CleanData) {
-  
-  ##########################
-  ## input data directory ##
-  
-  # DHS Birth Recode, or Individual Recode (i.e. women data)
-  DHS.raw.dir   <- "data/input/DHS/raw/"
-  DHS.input.dir <- "data/input/DHS/input/"
-  DHS.interim.dir <- "data/input/DHS/interim/"
-  DHS.output.dir   <- "data/input/DHS/output/"
-
-  # SRS dir
-  SRS.raw.dir   <- "data/input/SRS/raw/"
-  SRS.input.dir <- "data/input/SRS/input/"
-  SRS.output.dir   <- "data/input/SRS/output/"
-  
-  # Census dir
-  Census.input.dir <- "data/input/Census_2011/input/"
-  Census.output.dir   <- "data/input/Census_2011/output/"
-  
-  ###########################
-  ## output data directory ##
-  output.dir <- "data/output/"
-  
-  ####################
-  ## plot directory ##
-  fig.dir <- "fig/data pre-process/"
-  
-  
-  dir.create(DHS.interim.dir, showWarnings = FALSE)
-  dir.create(DHS.output.dir, showWarnings = FALSE)
-  dir.create(SRS.output.dir, showWarnings = FALSE)
-  dir.create(Census.output.dir, showWarnings = FALSE)
-  dir.create("fig", showWarnings = FALSE)
-  dir.create(fig.dir, showWarnings = FALSE)
-}#end of if(CleanData)
 
 #############################################
 ## setup directory for modeling and output ##
@@ -79,4 +72,5 @@ if (!CleanData) {
 }#end of if(!CleanData)
 
 ## the end ##
+
 
