@@ -1,8 +1,9 @@
 ##############################################################################
-# Levels and trends in the sex ratio at birth and missing female births for 29 states and union territories # in India 1990–2016: A Bayesian modeling study
+# Levels and trends in the sex ratio at birth and missing female births for 29 states 
+# and union territories in India 1990–2016: A Bayesian modeling study
 #
 # Code constructed by: Fengqing CHAO
-# Code last revised by: Qiqi Qiang on 22 September  2025
+# Code last revised by: Qiqi Qiang on 22 September 2025
 # 
 # source_BasicSetup.R
 # 
