@@ -19,7 +19,7 @@ The repository contains two parts: **code** and **data**.
 
 ## Research Context
 
-This project presents a subnational estimation and projection of Nepal’s Sex Ratio at Birth (SRB) from 1980 to 2050, based on a Bayesian hierarchical time series mixture model. While previous studies have examined SRB at the national level, our approach addresses the geographic heterogeneity of sex imbalances in Nepal—a country where regional variation is both significant and policy-relevant.We aim to estimate and project SRB for the seven provinces of Nepal from 1980 to 2050 using a Bayesian modeling approach. We compiled an extensive database on provincial SRB of Nepal, consisting of the 2001, 2006, 2011, and 2016 Nepal Demographic and Health Surveys and the 2011 Census. We adopted a Bayesian hierarchical time series model to estimate and project the provincial SRB, with a focus on modeling the potential SRB imbalance.
+This project presents a subnational estimation and projection of India’s Sex Ratio at Birth (SRB) from 1980 to 2050, based on a Bayesian hierarchical time series mixture model. While previous studies have examined SRB at the national level, our approach addresses the geographic heterogeneity of sex imbalances in India — a country where regional variation is both significant and policy-relevant.We aim to estimate and project SRB for the 29 states  of India from 1980 to 2050 using a Bayesian modeling approach. We compiled an extensive database on provincial SRB of India. We adopted a Bayesian hierarchical time series model to estimate and project the provincial SRB, with a focus on modeling the potential SRB imbalance.
 
 ## Methodology
 
