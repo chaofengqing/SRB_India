@@ -1,4 +1,28 @@
-
+##############################################################################
+# Levels and trends in the sex ratio at birth and missing female births for 29 states and union territories # in India 1990–2016: A Bayesian modeling study
+#
+# Code constructed by: Fengqing CHAO
+# Code last revised by: Qiqi Qiang on 22 September  2025
+# 
+# source_BasicSetup.R
+# 
+# This script sets up the basic stuff for all the rest script in code/ folder.
+# 1. assign constants;
+# 2. install packages and call libraries;
+# 3. prepare for JAGS model.
+#
+# used for which run: Main.run
+#
+# this script is called by any other scripts: main.R
+#
+# functions called: null
+# 
+# input data: aux.data.dir which contains the information for the surveys and countries.
+#             data/interim/database_for_modeling_2020-03-30.csv is the cleaned data.
+#
+# output data: null
+#
+###############################################################################
 ## basic setup ##
 aux.data.dir <- "data/input/Auxdata/"
 
@@ -10,9 +34,6 @@ aux.data.dir <- "data/input/Auxdata/"
 # install.packages("Hmisc")
 # install.packages("readstata13")
 
-if (CleanData) {
-  library(foreign) # read in SPSS data (for DHS)
-}#end of if(CleanData)
 
 ## call function scritps ##
 funcode.dirs <- list.dirs("code/R", full.names = TRUE, recursive = FALSE)
@@ -32,28 +53,6 @@ for (code.dir in funcode.dirs) {
 if.read.xlsx <- FALSE #FALSE # FALSE: if cannot load library(xlsx)
 if.read.csv  <- !if.read.xlsx
 
-if (CleanData) {
-  ## import survey information ##
-  ## read in DHS country code description file to identify country folder ##
-  if (if.read.xlsx) {
-    # library(xlsx) # read in xlsx file
-    # data.DHSCountryInfo <- read.xlsx(paste0(aux.data.dir, "SurveyInfo.xlsx"),
-    #                                  sheetName = "Country Code", stringsAsFactors = FALSE)
-    # 
-    # data.DHSinfo <- read.xlsx(paste0(aux.data.dir, "SurveyInfo.xlsx"),
-    #                           sheetName = "DHS", stringsAsFactors = FALSE)
-  }#end of if(if.read.xlsx)
-
-  if (if.read.csv) {
-    data.DHSCountryInfo <- read.csv(paste0(aux.data.dir, "SurveyInfo_CountryInfo.csv"),
-                                    header = TRUE, stringsAsFactors = FALSE, strip.white = TRUE)
-
-    data.DHSinfo <- read.csv(paste0(aux.data.dir, "SurveyInfo_DHS.csv"),
-                             header = TRUE, stringsAsFactors = FALSE, strip.white = TRUE)
-  }#end of if(if.read.csv)
-}#end of if(CleanData)
-
-
 ## info to save for SRB related data ##
 Nsim <- 1000 # number of simulations #FQ!!! do not use N which is para for natural SRB!!!
 percentiles <- c(0.025, 0.500, 0.975)
@@ -65,8 +64,8 @@ extremeSRB <- 5
 
 
 # Jackknife settings
-k.CVcutoff <- k.CVlogcutoff <- 0.05 #FQ20140820 change 0.1
-k.MaxTimePeriod <- 100 #after discuss with Patrick; 10 yr is convension for DHS in IGME #10 #5
+k.CVcutoff <- k.CVlogcutoff <- 0.05 
+k.MaxTimePeriod <- 100 
 
 # retrospective period keep for each full birth history data series
 k.RetroPeriod <- 20
@@ -103,7 +102,6 @@ name.c <- c(
   "Rajasthan",
   "Sikkim",
   "Tamil Nadu",
-  # "Telangana",#established in 2 Jun 2014
   "Tripura",
   "Uttar Pradesh",
   "Uttarakhand",
@@ -111,9 +109,6 @@ name.c <- c(
 )
 code.c <- GetIndiaStateCode(name.c)
 C <- length(unique(name.c)); C
-
-# plotname.c <- name.c
-# plotname.c[name.c == "Andhra Pradesh"] <- "former state of Andhra Pradesh"
 
 # time period that will be estimated for all countries/areas
 years.fix.t <- c(1950.5 : 2017.5) # for M51_normal onwards
@@ -141,12 +136,10 @@ Pmax <- length(parfull.p)
 cm <- 1 / 2.54
 
 # write JAGS model (jags_writeJAGSmodel.R)
-NoTermPerLine <- 2 #shorten the length of long summition to seperate lines
-
-plotWhichP <- 30 # trace plot for logP.ct: too many of them, only plot some
+NoTermPerLine <- 2 # shorten the length of long summition to seperate lines
+plotWhichP    <- 30 # trace plot for logP.ct: too many of them, only plot some
 
 ## assign input file names ##
-# srb.filename <- "database_for_modeling_2018-09-10.csv"
 srb.filename <- "database_for_modeling_2020-03-30.csv"
 
 ## the end ##
