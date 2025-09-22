@@ -20,9 +20,9 @@
 # output data:                     null
 #
 # Folders that you need to create by yourself before you start this project:
-# project folder: SRB_Pakistan/
-# input data folder: SRB_Pakistan/data/input/
-# output data folder: SRB_Pakistan/data/output
+# project folder: SRB_India/
+# input data folder: SRB_India/data/input/
+# output data folder: SRB_India/data/output
 #
 #
 # Folders that will be created after running this script for a certain run:
@@ -72,5 +72,6 @@ if (!CleanData) {
 }#end of if(!CleanData)
 
 ## the end ##
+
 
 
