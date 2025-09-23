@@ -1,5 +1,58 @@
 
-
+###############################################################################
+# Levels and trends in the sex ratio at birth and missing female births 
+# for 29 states and union territories in India 1990–2016: A Bayesian modeling study
+#
+# Code constructed by: Fengqing CHAO
+# Code last revised by: Qiqi Qiang on 23 September 2025
+# 
+# main_output.R
+# 
+# This script is the master file to get all results for Main.run. Run this
+# script ONLY AFTER main.R have all been run through.
+#
+# used for which run: Main.run
+#
+# this script is called by any other scripts: null
+#
+# this script calls other scripts:
+# 01. source_BasicSetup.R
+# 02. source_DirectorySetup.R
+# 04. source_DataSetup.R
+# 05. jags_setupMCMC.R
+# 06. jags_ConvergenceCheck.R
+# 07. construct_logPselect.R
+# 08. construct_CountryList_PastInflation.R
+# 09. construct_countryCIs.R
+# 10. plot_lineseg_SRB_allstates.R
+# 11. plot_countrySRB&TFR.R
+# 12. plot_countrySRB&AMFB.R
+# 13. plot_SRB_map.R"
+# 14. construct_cumsumMissingFemaleBirth.R
+# 15. construct_countryCIs_SaveResults(cqt).R
+# 16. construct_countryCIs_CountryTrajectories.R
+# 17. plot_countryCIandData(NOimpute).R
+#
+# functions called: function(2) means the function is called twice in this
+# script. Those functions called in the scripts listed above are not listed.
+# ReadJagsOutput(1)
+#
+# input data in folder data/:
+# 1. interim/database_for_modeling_2020-03-30.csv - SR data base;
+#                                      created by source_dataCleaning (main.R)
+#
+# 2. output/M4/temp.JAGSobjects/* - read in stepwise JAGS output
+#
+# output data in folder data/output/M4/
+# 1. selectP_M4.rda  - the estimated probabilities of SRB inflation 
+#                      for each country or region based on the Bayesian model outputs.
+# 2. cis_M4.rda   - the region median with 90% CI in orderto get other tables and plots.
+# 3. cis_M4_CumsumMissing.rda  - the number of missing female
+# 4. mcmc.array_M4.rda  - MCMC array
+# Note: only the main output data are listed here since it is a master script.
+# The above output data may be created in other scripts which are called in
+# this script.
+#################################################################################
 ## Master code file ##
 ## This run is to get normal level of SRB only!!!
 
@@ -12,7 +65,7 @@ First.run <- FALSE # construct mcmcarray and output?
 CleanData <- FALSE # only do once to avoid problems with sorting differences
 DoMCMC    <- FALSE  # get step-wise JAGS output?
 
-workdir <- "/Users/chaof/work/"
+workdir <- "Your own working dictionary"
 
 setwd(file.path(workdir, projname))
 
