@@ -1,37 +1,32 @@
-
-
 ###############################################################################
-# A systematic assessment of national, regional and global sex ratios of
-# infant, child and under-five mortality and identification of countries with
-# outlying levels
+# Levels and trends in the sex ratio at birth and missing female births 
+# for 29 states and union territories in India 1990–2016: A Bayesian modeling study
 #
-# Code constructed by: Leontine ALKEMA and Fengqing CHAO
-# Code last revised by: Fengqing CHAO on 25 Feb 2014
+# Code constructed by: Fengqing CHAO
+# Code last revised by: Qiqi Qiang on 23 September 2025
 # 
 # construct_logPselect.R
 # 
 # This script is to get trajectories for logP's for each year of the full
 # observation period. In JAGS model, we only save those non-missing logP's.
 #
-# used for which run: Main.run; Validation.run; Excl.run
+# used for which run: main.run
 #
-# this script is called by any other scripts: main*_output.R
+# this script is called by any other scripts: main_output.R
 #
 # this script calls other scripts: null
 #
-# functions called: function(2) means the function is called twice in this
-# script. Those functions called in the scripts listed above are not listed.
-# InternalGetARTrajectories(1)
+# functions called: null
 # 
-# input data: data/output/runname/mcmc.array_runname.rda
+# input data: null
 #
-# output data: data/output/runname/selectP_runname.rda
+# output data: null
 #
 ###############################################################################
 
 # note: here l refers to posterior sample
-rho.l   <- c(mcmc.array[, , "rho"])
-sigma.l <- c(mcmc.array[, , "sigma.eps"])
+rho.l    <- c(mcmc.array[, , "rho"])
+sigma.l  <- c(mcmc.array[, , "sigma.eps"])
 logP.ctl <- array(NA, c(C, Tend, L))
 
 for (c in 1:C) {
@@ -61,4 +56,5 @@ for (c in 1:C) {
 selectP <- list(logP.ctl = logP.ctl)
 
 ## the end ##
+
 
