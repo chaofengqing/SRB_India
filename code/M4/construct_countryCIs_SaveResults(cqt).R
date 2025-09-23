@@ -18,7 +18,7 @@
 # SamplesToUI(11)
 #
 # input data: 
-# data/output/countryTrajectory/trajectory_M3_*_full.rda
+# data/output/countryTrajectory/trajectory_M4_*_full.rda
 #
 # output data:
 # 1. data/output/cis_full_M4.rda
@@ -87,6 +87,7 @@ res.Rtrajectory <- list(R.clt = R.clt)
 save(res.Rtrajectory, file = paste0(output.dir, "trajectory_", runname, "_R.rda"))
 
 ## the end ##
+
 
 
 
