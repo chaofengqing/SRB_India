@@ -1,5 +1,27 @@
-
-
+###############################################################################
+# Levels and trends in the sex ratio at birth and missing female births for 
+# 29 states and union territories in India 1990–2016: A Bayesian modeling study
+#
+# Code constructed by: Fengqing CHAO
+# Code last revised by: Qiqi Qiang on 22 September 2025
+#
+# construct_CountryList_PastInflation.R
+# 
+# This script identifies countries with past SRB inflation 
+#
+# used for which run: Main.run
+#
+# this script is called by any other scripts: main_output.R
+#
+# this script calls other scripts: null
+#
+# functions called: null
+# 
+# input data: null
+#
+# output data: null
+#
+###############################################################################
 ## identify countries with past SRB inflation ##
 adj.year <- 1970.5
 adj.timeindex <- which(years.t == adj.year)
