@@ -1,4 +1,15 @@
-
+#
+# functions called: function(2) means the function is called twice in this
+# script. Those functions called in the scripts listed above are not listed.
+# SamplesToUI(1)
+#
+# input data: 
+# data/output/countryTrajectory/trajectory_M4_*_full.rda
+#
+# output data:
+# 1. data/output/cis_M4_CumsumMissing.rda
+#
+###############################################################################
 
 ## construct cummulative number of missing girls for the world and regions ##
 
@@ -31,4 +42,5 @@ res.missing.CI <- list(cumsum.missingBf.cqt = cumsum.missingBf.cqt,
 save(res.missing.CI, file = paste0(output.dir, "cis_", runname, "_CumsumMissing.rda"))
 
 ## the end ##
+
 
