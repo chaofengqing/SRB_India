@@ -1,4 +1,28 @@
 
+#################################################################################
+# Levels and trends in the sex ratio at birth and missing female births 
+# for 29 states and union territories in India 1990–2016: A Bayesian modeling study
+#
+# Code constructed by: Fengqing CHAO
+# Code last revised by: Qiqi Qiang on 23 September 2025
+# 
+# jags_getMCMC.R
+# 
+# This script calls JAGS and run the JAGS model on several serves parallely.
+#
+# used for which run: main.run
+#
+# this script is called by any other scripts: main.R
+#
+# this script calls other scripts: null
+# functions called:                null
+# 
+# input data: most information are from jags_setupMCMC.R.
+#
+# output data: data/output/M4/temp.JAGSobjects/* - stepwise JAGS output
+# note: these output files will be combined in main_output.R to get mcmc.array
+#
+###############################################################################
 
 
 ## RUN FOR JAGS ##
@@ -50,5 +74,6 @@ foreach(chain = ChainIDs) %dopar% {
 
 stopImplicitCluster()
 ## the end ##
+
 
 
