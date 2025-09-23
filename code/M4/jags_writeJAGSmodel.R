@@ -1,5 +1,26 @@
 
-
+###############################################################################
+# Levels and trends in the sex ratio at birth and missing female births 
+# for 29 states and union territories in India 1990–2016: A Bayesian modeling study
+#
+# Code constructed by: Fengqing CHAO
+# Code last revised by: Qiqi Qiang on 23 September 2025
+# 
+# jags_writeJAGSmodel.R
+# 
+# This script writes out JAGS model file.
+#
+# used for which run: main.run
+#
+# this script is called by any other scripts: jags_setupMCMC.R
+#
+# this script calls other scripts: null
+# functions called:                null
+# 
+# input data: most information are from source_BasicSetup and jags_setupMCMC.R.
+#
+# output data: data/output/M4/*.txt
+#
 ###############################################################################
 
 # JAGS may not work well on sum with many elements. So we split into several
@@ -42,19 +63,6 @@ model {
     
     # for VR:
     sigma.s[S] <- 0
-    
-    
-    ############
-    ## priors ##
-    # tau.eps.stat <- tau.eps * (1 - pow(rho, 2))
-    # tau.N        <- pow(sigma.N, -2)
-    # 
-    # ## hyper parameters ##
-    # sigma.eps   <- pow(tau.eps, -1/2)
-    # sigma.b   <- pow(tau.b, -1/2)
-    # rho       ~ dunif(pri.rho.lower, pri.rho.upper)
-    # tau.eps   ~ dgamma(1, 1)
-    # tau.b     ~ dgamma(1, 1)
 
     ## taus ##
     tau.eps.stat <- tau.eps * (1 - pow(rho, 2))
@@ -102,4 +110,5 @@ model {
 
 
 ## The End! ##
+
 
