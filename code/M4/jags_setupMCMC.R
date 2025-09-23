@@ -1,4 +1,42 @@
-
+###############################################################################
+# Levels and trends in the sex ratio at birth and missing female births 
+# for 29 states and union territories in India 1990–2016: A Bayesian modeling study
+#
+# Code constructed by: Fengqing CHAO
+# Code last revised by: Qiqi Qiang on 23 September 2025
+# 
+# jags_setupMCMC.R
+# 
+# This script setup parameters, input data, initial values and JAGS model file
+# for JAGS model.
+#
+# used for which run: Main.run; Validation.run; Excl.run
+#
+# this script is called by any other scripts: main*_*.R
+#
+# this script calls other scripts: jags_writeJAGSmodel.R
+#
+# functions called: null
+# 
+# input data: data/input/M57_normal_postinfo.csv
+#
+# output data:
+# 1. ChainIDs
+# 2. mort.data
+# 3. mort.inits
+# 4. mort.parameters
+# note: JAGS model file is created in jags_writeJAGSmodel.R
+#
+# JAGS model setup summary in five parts:
+# part 1: assign sequence of ChainIDs based on runID
+#
+# part 2: specify parameters to be saved for JAGS output, i.e. MCMC array
+#
+# part 3: specify input data for JAGS model
+#
+# part 4: write out JAGS model in txt format
+# 
+###############################################################################
 
 
 # for a median test, overwrite MCMC settings
@@ -34,9 +72,6 @@ sigma.N <- 0.002
 
 ##########
 ## part 1: assign sequence of ChainIDs based on runID
-# ChainIDs <- (runID - 1) * mcmc.chains + seq(1, mcmc.chains) # number of chains for aech script
-
-
 ## get the most recent time index with data for each country
 max.t.c <- min.t.c <- rep(NA, C)
 for (c in 1:C) {
@@ -99,8 +134,9 @@ mort.data <- c(
 
 
 ##########
-## part 5: write out JAGS model in txt format
+## part 4: write out JAGS model in txt format
 JAGSmodel.name <- paste0(runname, ".txt")
 if (First.run) source(paste0("code/", runname, "/jags_writeJAGSmodel.R"))
 
 ## The End! ##
+
