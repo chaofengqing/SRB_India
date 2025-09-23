@@ -10,9 +10,9 @@
 # This script checks the convergence of JAGS model output, i.e. mcmc.array. It
 # produces trace plots for (selected) parameters, and compute median, CI, R hat
 #
-# used for which run: Main.run; Validation.run; Excl.run
+# used for which run: Main.run
 #
-# this script is called by any other scripts: main*_output.R
+# this script is called by any other scripts: main_output.R
 #
 # this script calls other scripts: null
 # functions called:                null
@@ -50,4 +50,5 @@ dev.off()
 
 
 ## The End! ##
+
 
