@@ -23,7 +23,7 @@
 # input data: data/interim/birth.ct.rda
 #
 # output data: 
-# data/output/countryTrajectory/trajectory_M3_*_full.rda 
+# data/output/countryTrajectory/trajectory_M4_*_full.rda 
 #
 ###############################################################################
 load(file = paste0(interim.dir, "birth.ct.rda")) #birth.ct
@@ -86,4 +86,5 @@ for (c in 1:C) {
 }#end of c loop
 
 ## the end! ##
+
 
