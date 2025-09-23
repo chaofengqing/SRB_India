@@ -1,10 +1,30 @@
-
-
-###############################################################################
-# SRB project
+#############################################################################
+# Levels and trends in the sex ratio at birth and missing female births 
+# for 29 states and union territories in India 1990–2016: A Bayesian modeling study
+#
+# Code constructed by: Fengqing CHAO
+# Code last revised by: Qiqi Qiang on 23 September 2025
+# 
+# This script saves the results.
+#
+# used for which run: main.run
+#
+# this script is called by any other scripts: main_output.R
+#
+# this script calls other scripts: null
+#
+# functions called: function(2) means the function is called twice in this
+# script. Those functions called in the scripts listed above are not listed.
+# SamplesToUI(11)
+#
+# input data: 
+# data/output/countryTrajectory/trajectory_M3_*_full.rda
+#
+# output data:
+# 1. data/output/cis_full_M4.rda
+# 2. data/output/trajectory_M4_R.rda
 #
 ###############################################################################
-
 ## construct empty arrays and metrics and assign dimention names ##
 array.cqt <- array(0, c(C, Per, Tend))
 array.clt <- array(0, c(C, L,   Tend))
@@ -67,5 +87,6 @@ res.Rtrajectory <- list(R.clt = R.clt)
 save(res.Rtrajectory, file = paste0(output.dir, "trajectory_", runname, "_R.rda"))
 
 ## the end ##
+
 
 
