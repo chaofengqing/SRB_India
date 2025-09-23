@@ -4,7 +4,7 @@ This repository presents the first subnational study of Sex Ratio at Birth (SRB)
 **Please refer to the [published paper](https://www.aimsciences.org/article/doi/10.3934/fods.2019008) regarding to this repository for details on the research background/context, model implementation, data sources, and policy implications**:
 
 - Main paper:  Fengqing Chao, Ajit Kumar Yadav (2019). Levels and trends in the sex ratio at birth and missing female births for 29 states and union territories in India 1990-2016: A Bayesian modeling study. Foundations of Data Science, 1(2) 177–196.
-- Technical appendix of the main paper: Chao, Fengqing; Z. Guilmoto, Christophe; K.C., Samir; Ombao, Hernando (2020). S1 Appendix Probabilistic projection of the sex ratio at birth and missing female births by State and Union Territory in India. figshare. Dataset. https://doi.org/10.6084/m9.figshare.12672821.v1
+
 
 ## Repository Structure
 
@@ -18,8 +18,7 @@ The repository contains two parts: **code** and **data**.
   - /data/interim/M57_normal_postinfo.csv: data files regarding  to the posterior information of JAGS model. 
 
 ## Research Context
-
-This project presents a subnational estimation and projection of India’s Sex Ratio at Birth (SRB) from 1980 to 2050, based on a Bayesian hierarchical time series mixture model. While previous studies have examined SRB at the national level, our approach addresses the geographic heterogeneity of sex imbalances in India — a country where regional variation is both significant and policy-relevant.We aim to estimate and project SRB for the 29 states  of India from 1980 to 2050 using a Bayesian modeling approach. We compiled an extensive database on provincial SRB of India. We adopted a Bayesian hierarchical time series model to estimate and project the provincial SRB, with a focus on modeling the potential SRB imbalance.
+This project presents a subnational estimation and projection of India’s Sex Ratio at Birth (SRB) from 1990 to 2016, based on a Bayesian hierarchical time series mixture model. While previous studies have examined SRB at the national level, our approach addresses the geographic heterogeneity of sex imbalances in India — a country where regional variation is both significant and policy-relevant.We aim to estimate and project SRB for the 29 states  of India from 1980 to 2050 using a Bayesian modeling approach. We compiled an extensive database on provincial SRB of India. We adopted a Bayesian hierarchical time series model to estimate the provincial SRB, with a focus on modeling the potential SRB imbalance.
 
 ## Methodology
 
