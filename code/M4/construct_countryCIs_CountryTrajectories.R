@@ -1,6 +1,31 @@
-
-
-
+##############################################################################
+# Levels and trends in the sex ratio at birth and missing female births 
+# for 29 states and union territories in India 1990–2016: A Bayesian modeling study
+#
+# Code constructed by: Fengqing CHAO
+# Code last revised by: Qiqi Qiang on 23 September 2025
+# construct_countryCIs_CountryTrajectories.R
+# 
+# This script uses Bayesian posterior samples to estimate state - level sex ratios at 
+# birth and missing female births (1990-2016), then saves the full trajectories 
+# for each state.
+#
+# used for which run: main.run
+#
+# this script is called by any other scripts: main_output.R
+#
+# this script calls other scripts: null
+#
+# functions called: function(2) means the function is called twice in this
+# script. Those functions called in the scripts listed above are not listed.
+# GetSexSpecificBirthfromAllandSRB(1)
+# 
+# input data: data/interim/birth.ct.rda
+#
+# output data: 
+# data/output/countryTrajectory/trajectory_M3_*_full.rda 
+#
+###############################################################################
 load(file = paste0(interim.dir, "birth.ct.rda")) #birth.ct
 
 dim(birth.ct) # 29 93
@@ -61,3 +86,4 @@ for (c in 1:C) {
 }#end of c loop
 
 ## the end! ##
+
