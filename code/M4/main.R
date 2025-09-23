@@ -1,4 +1,35 @@
-
+###############################################################################
+# Levels and trends in the sex ratio at birth and missing female births 
+# for 29 states and union territories in India 1990–2016: A Bayesian modeling study
+#
+# Code constructed by: Fengqing CHAO
+# Code last revised by: Qiqi Qiang on 23 September 2025
+#
+# main.R
+# 
+# This script is the master file to get MCMC array for Main.run. Run this
+# script to get reulsts.
+#
+# used for which run: main.run
+#
+# this script is called by any other scripts: null
+#
+# this script calls other scripts:
+# 1. source_BasicSetup.R
+# 2. source_DirectorySetup.R
+# 3. source_DataSetup.R 
+# 4. jags_setupMCMC.R
+# 5. jags_getMCMC.R
+#
+# functions called: Null
+# 
+# input data: data/interim/database_for_modeling_2020-03-30.csv
+#
+# output data:
+# data/output/M4/temp.JAGSobjects/  - stepwise JAGS trajectory output
+# Note: only the main output data are listed here since it is a master script.
+#
+###############################################################################
 
 ## Master code file ##
 ## This run is to get normal level of SRB only!!!
@@ -14,7 +45,7 @@ First.run <- TRUE # construct mcmcarray and output?
 CleanData <- FALSE # only do once to avoid problems with sorting differences
 DoMCMC    <- TRUE  # get step-wise JAGS output?
 
-workdir <- "/Users/chaof/work/"
+workdir <- "Your own working dictionary"
 
 setwd(file.path(workdir, projname))
 
@@ -37,9 +68,6 @@ adj.year <- 1970.5 # no adjustment before 1980
 
 
 source(paste0("code/", runname, "/source_DataSetup.R"))
-
-# ## data for adjustment factor ##
-# source(paste0("code/", runname, "/source_adj_DataSetup.R"))
 
 # setup MCMC settings
 source(paste0("code/", runname, "/jags_setupMCMC.R"))
