@@ -1,12 +1,9 @@
-
-
 ###############################################################################
-# A systematic assessment of national, regional and global sex ratios of
-# infant, child and under-five mortality and identification of countries with
-# outlying levels
+# Levels and trends in the sex ratio at birth and missing female births 
+# for 29 states and union territories in India 1990–2016: A Bayesian modeling study
 #
-# Code constructed by: Leontine ALKEMA and Fengqing CHAO
-# Code last revised by: Fengqing CHAO on 25 Feb 2014
+# Code constructed by: Fengqing CHAO
+# Code last revised by: Qiqi Qiang on 23 September 2025
 # 
 # jags_ConvergenceCheck.R
 # 
@@ -20,10 +17,10 @@
 # this script calls other scripts: null
 # functions called:                null
 # 
-# input data: data/output/runname/mcmc.array_runname.rda
+# input data: data/output/M4/mcmc.array_M4.rda
 #
-# output data: data/output/runname/*_postinfo.csv - R hat; post sample median, CI
-# output plot: fig/runname/convergence/*
+# output data: data/output/M4_postinfo.csv - R hat; post sample median, CI
+# output plot: fig/M4/convergence/*
 #
 ###############################################################################
 
@@ -37,27 +34,6 @@ for (par in c(hyper.para, para.sigmas)) {
   PlotTrace(parname = par, mcmc.array = mcmc.array)
 }#end of par loop
 dev.off()
-
-
-
-# ######################
-# needs temp jags objects, not updated
-# ## check DIC values ##
-# if(First.run){
-#   DIC.matrix<-matrix(NA,nr=mcmc.chains,nc=N.STEPS) #save DIC value
-#   dimnames(DIC.matrix)[[1]]<-c(paste("chain",seq(1,mcmc.chains),sep=" "))
-#   dimnames(DIC.matrix)[[2]]<-c(paste("step",seq(1,N.STEPS),sep=" "))
-#   
-#   for(chain in 1:mcmc.chains){
-#     for(i in 1:N.STEPS){
-#       load(paste0(output.dir,"temp.JAGSobjects/jags_mod",runname,chain,"update_",i,".Rdata"))
-#       DIC.matrix[chain,i]<-mod.upd$BUGSoutput$DIC
-#       remove(mod.upd)
-#     }#end of N.STEPS loop
-#   }#end of mcmc.chains loop
-#   write.csv(DIC.matrix,paste0(output.dir,"DIC_",runname,"_",IntervalLength,"knots.csv"))
-# }
-
 ###############################################
 ## compute R hat and post sample information ##
 post.full <- getPostInfo(mcmc.array = mcmc.array)
@@ -74,3 +50,4 @@ dev.off()
 
 
 ## The End! ##
+
