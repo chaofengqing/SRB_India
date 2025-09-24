@@ -1,4 +1,20 @@
-
+###############################################################################
+# Levels and trends in the sex ratio at birth and missing female births 
+# for 29 states and union territories in India 1990–2016: A Bayesian modeling study
+#
+# Code constructed by: Fengqing CHAO
+# Code last revised by: Qiqi Qiang on 24 September 2025
+# PlotTrace.R
+# 
+# This script contains function relating to the trace plot for one parameter 
+# and adding loess smoother for each chain.
+#
+# Functions are: function1(.., function2(3), ..); means function2 is called
+# three times inside function1.
+#
+# PlotTrace(..)
+#
+###############################################################################
 
 PlotTrace <- function(#Traceplot for one parameter
   ## Trace plot for one parameter and add loess smoother for each chain ##
@@ -19,3 +35,4 @@ PlotTrace <- function(#Traceplot for one parameter
   }
   
 }#end of PlotTrace function
+
