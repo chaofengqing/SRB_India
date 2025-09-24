@@ -1,7 +1,31 @@
-
-
-
-
+###############################################################################
+# Levels and trends in the sex ratio at birth and missing female births 
+# for 29 states and union territories in India 1990–2016: A Bayesian modeling study
+#
+# Code constructed by: Fengqing CHAO
+# Code last revised by: Qiqi Qiang on 24 September 2025
+#
+# plot_lineseg_SRB_allstates.R
+# 
+# This script compares the estimated SRB and its confidence intervals 
+# for multiple regions of India.
+#
+# used for which run: Main.run
+#
+# this script is called by any other scripts: main_output.R;
+#
+# this script calls other scripts: null
+#
+# functions called: function(2) means the function is called twice in this
+# script. Those functions called in the scripts listed above are not listed.
+# PlotCIsegments(1)
+# 
+# input data: null
+#
+# output plots in folder fig/: 
+# 1.SRB_all_states_2016order.pdf - compares SRB in 2016, 2000, and 1990
+#
+###############################################################################
 years.select <- c(2016, 1990) + 0.5
 t.select <- which(is.element(years.t, years.select))
 
@@ -33,4 +57,5 @@ dev.off()
 
 
 ## the end ##
+
 
