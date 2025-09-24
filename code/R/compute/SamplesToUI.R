@@ -1,4 +1,23 @@
-
+###############################################################################
+# Levels and trends in the sex ratio at birth and missing female births 
+# for 29 states and union territories in India 1990–2016: A Bayesian modeling study
+#
+# Code constructed by: Fengqing CHAO
+# Code last revised by: Qiqi Qiang on 24 September 2025
+#
+# SamplesToUI.R
+# 
+# This script contains function related to computing specified percentiles 
+# from posterior samples.
+#
+# Functions are: function1(.., function2(3), ..); means function2 is called
+# three times inside function1.
+#
+# SamplesToUI(..)
+#
+#
+###############################################################################
+#------------------------------------------------------------------------------
 
 SamplesToUI <- function (
   samples.jt, # inputs, note that it also works for samples.j
@@ -17,3 +36,4 @@ SamplesToUI <- function (
   return (result.qt)
   
 }#end of SamplesToUI function
+
