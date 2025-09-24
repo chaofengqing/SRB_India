@@ -1,3 +1,20 @@
+###############################################################################
+# Levels and trends in the sex ratio at birth and missing female births 
+# for 29 states and union territories in India 1990–2016: A Bayesian modeling study
+#
+# Code constructed by: Fengqing CHAO
+# Code last revised by: Qiqi Qiang on 24 September 2025
+# F_SRBFunctions.R
+# 
+# This script contains all functions related to SRB computations.
+# Functions are: function1(.., function2(3), ..); means function2 is called
+# three times inside function1.
+# GetSRB(..)
+# GetSRBfromAllandMale(..,GetSRB(1),..)
+# GetSexSpecificBirthfromAllandSRB(..,GetSRBfromAllandMale(1),..)
+# SimSRBforCI (..,GetSRBfromAllandMale(1),..)
+# 
+###############################################################################
 
 
 ## functions related to SRB ##
@@ -98,5 +115,6 @@ SimSRBforPI <- function (
 }
 #SimSRBforPI(b.male = , b.female = , prob.male.exp = prob.male0, n.sim = 1000)
 #------------------------------------------------------------------------------
+
 
 
