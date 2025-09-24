@@ -27,11 +27,10 @@
 # 10. plot_lineseg_SRB_allstates.R
 # 11. plot_countrySRB&TFR.R
 # 12. plot_countrySRB&AMFB.R
-# 13. plot_SRB_map.R"
-# 14. construct_cumsumMissingFemaleBirth.R
-# 15. construct_countryCIs_SaveResults(cqt).R
-# 16. construct_countryCIs_CountryTrajectories.R
-# 17. plot_countryCIandData(NOimpute).R
+# 13. construct_cumsumMissingFemaleBirth.R
+# 14. construct_countryCIs_SaveResults(cqt).R
+# 15. construct_countryCIs_CountryTrajectories.R
+# 16. plot_countryCIandData(NOimpute).R
 #
 # functions called: function(2) means the function is called twice in this
 # script. Those functions called in the scripts listed above are not listed.
@@ -151,7 +150,5 @@ source(paste0("code/", runname, "/plot_lineseg_SRB_allstates.R"))
 source(paste0("code/", runname, "/plot_countrySRB&TFR.R"))
 source(paste0("code/", runname, "/plot_countrySRB&AMFB.R"))
 
-## India map for SRB
-source(paste0("code/", runname, "/plot_SRB_map.R"))
 
 ## The End! ##
