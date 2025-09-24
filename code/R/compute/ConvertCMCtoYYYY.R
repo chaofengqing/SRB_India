@@ -1,4 +1,19 @@
-
+###############################################################################
+# Levels and trends in the sex ratio at birth and missing female births 
+# for 29 states and union territories in India 1990–2016: A Bayesian modeling study
+#
+# Code constructed by: Fengqing CHAO
+# Code last revised by: Qiqi Qiang on 24 September 2025
+# 
+# ConvertCMCtoYYYY.R
+# 
+# This script contains a utility function to convert Century Month Code to Year format
+# 
+# Functions are: function1(.., function2(3), ..); means function2 is called
+# three times inside function1.
+# ConvertCMCtoYYYY(..)
+# 
+#################################################
 
 ConvertCMCtoYYYY <- function(
   cmc.date, # input date should be CMC value
