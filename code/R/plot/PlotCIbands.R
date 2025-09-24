@@ -1,4 +1,23 @@
-
+###############################################################################
+# Levels and trends in the sex ratio at birth and missing female births 
+# for 29 states and union territories in India 1990–2016: A Bayesian modeling study
+#
+# Code constructed by: Fengqing CHAO
+# Code last revised by: Qiqi Qiang on 24 September 2025
+#
+# PlotCIbands.R
+# 
+# This script contains function which plots confidence interval bands 
+# and median estimate lines over time from posterior summaries.
+#
+# Functions are: function1(.., function2(3), ..); means function2 is called
+# three times inside function1.
+#
+# PlotCIbands(..)
+#
+#
+###############################################################################
+#------------------------------------------------------------------------------
 
 PlotCIbands <- function(
   if.CI = TRUE, # if plot CI band
@@ -69,3 +88,4 @@ PlotCIbands <- function(
   }#end of ifelse (!if.CI & !if.line)
   
 }#end of PlotCIbands function
+
