@@ -1,4 +1,30 @@
-
+###############################################################################
+# Levels and trends in the sex ratio at birth and missing female births 
+# for 29 states and union territories in India 1990–2016: A Bayesian modeling study
+#
+# Code constructed by: Fengqing CHAO
+# Code last revised by: Qiqi Qiang on 24 September 2025
+#
+# plot_countrySRB&AMFB.R
+# 
+# This script plots the results for all the countries
+#
+# used for which run: Main.run
+#
+# this script is called by any other scripts: main_output.R;
+#
+# this script calls other scripts: null
+#
+# functions called: function(2) means the function is called twice in this
+# script. Those functions called in the scripts listed above are not listed.
+# PlotCIbandwithDataseries(1)
+# 
+# input data: null
+#
+# output plots in folder fig/: 
+# 1.CIs_SRBandAMFB_India_state_M4_*.pdf - compares SRB in 2016, 2000, and 1990
+#
+###############################################################################
 
 ############################################
 ## plot the results for all the countries ##
@@ -22,8 +48,8 @@ for (c in 1:C) { #c in c.asia: now plot a subset of Asian countries
   PlotCIbandwithDataseries(
     if.LogScale = TRUE, if.SurveyLegend = TRUE, if.xlimFix = TRUE,
     dataseries = logr.i, dataseriesSE = logSEnoimpute.i, year.t = plot.year,
-    CI1s = R.qt, #nameCI1 = "National SRB",
-    CI2s = N.qt, #nameCI2 = "Regional norm",
+    CI1s = R.qt, 
+    CI2s = N.qt, 
     Source = surveyplot.i,
     baseSeries = "SRS", x.lim = range(plot.year-0.5),
     x = year.i, select.x = select,
@@ -51,4 +77,5 @@ for (c in 1:C) { #c in c.asia: now plot a subset of Asian countries
 dev.off()
 
 ## the end ##
+
 
