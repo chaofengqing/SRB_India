@@ -1,4 +1,4 @@
-# SRB_India
+# SRB_India: Sex Ratio at Birth in India Among 29 Subnational Regions (1990–2016)
 This repository presents the first subnational study of Sex Ratio at Birth (SRB) trends and projections in India from 1990 to 2016. We adopt a **Bayesian hierarchical time-series mixture model** to estimate and forecast SRB across 29 states in India. The model leverages an extensive database compiled from all available censuses and nationally representative surveys.
 
 **Please refer to the [published paper](https://www.aimsciences.org/article/doi/10.3934/fods.2019008) regarding to this repository for details on the research background/context, model implementation, data sources, and policy implications**:
